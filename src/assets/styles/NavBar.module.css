@@ -1,0 +1,10 @@
+.navItem:hover{
+  color: rgb(155, 22, 22) !important;
+  text-decoration: underline;
+}
+
+.imgLOGO {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}

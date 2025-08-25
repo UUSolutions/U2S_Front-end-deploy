@@ -1,0 +1,48 @@
+/* AboutHeader.module.css */
+
+.aboutHeading {
+  width: 100%;
+  background-color: #90c7a5;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.aboutHeading nav {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.heading_lst {
+  display: flex;
+  justify-content: space-around; /* This distributes the items with equal space around them */
+  width: 100%; /* Make the ul take up the full width to distribute items */
+  padding: 0; 
+  margin: 0; 
+}
+
+.h_list1, .h_list2, .h_list3, .h_list4, .h_list5 {
+  list-style-type: none;
+  /* Remove individual widths, as `space-around` handles the distribution */
+  padding: 10px;
+  color: rgb(94, 94, 161);
+}
+
+h2 {
+  text-align: center;
+  color: rgb(137, 111, 111) !important;
+}
+
+/* Add a style for the active link */
+.active {
+    background-color: #558766; /* Example: a darker shade to indicate it's active */
+    color: white; /* Change text color for better contrast */
+    border-radius: 5px;
+}
+
+/* Also, remove the pointer cursor from the links if they are not active */
+.heading_lst a {
+    cursor: pointer;
+}

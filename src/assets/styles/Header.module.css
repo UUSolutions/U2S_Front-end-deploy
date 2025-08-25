@@ -1,0 +1,18 @@
+.HomeHeaderBlock {
+  width: 100%;                 /* full width like navbar */
+  background-color: #dde1e2;   /* navbar-like color */
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.mainheaderHome {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #867979;
+}
+
+.pr_home {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b9a95;
+}

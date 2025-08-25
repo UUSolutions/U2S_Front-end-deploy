@@ -1,5 +1,7 @@
 // import React from 'react';
 
+import styles from '../assets/styles/Directories.module.css'
+
 // Sample contributor data
 const contributors = [
   {
@@ -18,8 +20,39 @@ const contributors = [
 
 const Directories = () => {
   return (
-    <div className="container mt-4">
-      <h3 className="mb-4 text-center">Meet the Team</h3>
+    <div className={styles.DirMainBlock}>
+      <h3 className={styles.DirHeader}>Meet the team</h3>
+      {
+        contributors.map((person,index) => (
+          <div>
+            <div>
+            <img
+             src={person.photo}
+             className={styles.DirPhoto}
+             alt='Contributor photo'
+            />
+            </div>
+            <div>
+              <h5>{person.name}</h5>
+              <h6>{person.role}</h6>
+              <p>{person.bio}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  );
+};
+
+export default Directories;
+
+
+
+
+
+
+
+      {/* <h3 className="mb-4 text-center">Meet the Team</h3>
       <div className="row">
         {contributors.map((person, index) => (
           <div className="col-md-4 mb-4" key={index}>
@@ -42,9 +75,9 @@ const Directories = () => {
             </div>
           </div>
         ))}
-      </div>
-    </div>
-  );
-};
+      </div> */}
+//     </div>
+//   );
+// };
 
-export default Directories;
+// export default Directories;

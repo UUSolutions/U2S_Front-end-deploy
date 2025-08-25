@@ -1,5 +1,6 @@
-import { FaUmbrella } from "react-icons/fa6";
+// import { FaUmbrella } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import styles from '../../assets/styles/NavBar.module.css';
 
 const NavBar = () => {
   return (
@@ -8,10 +9,11 @@ const NavBar = () => {
 
         {/* Left: Brand */}
         <div className="d-flex align-items-center me-4">
-          <a className="navbar-brand d-flex align-items-center" href="#">
-            <FaUmbrella className="me-2" />
-            U2_Solutions
-          </a>
+          <Link className={`navbar-brand d-flex align-items-center ${styles.navItem}`} to="/">
+            {/* <FaUmbrella className="me-2" />
+            U2_Solutions */}
+            <img src="/images/U2S.png" className={styles.imgLOGO}/>
+          </Link>
         </div>
 
         {/* Center: Search Form */}
@@ -45,25 +47,25 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className={`nav-link active ${styles.navItem}`} aria-current="page" to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                About
-              </a>
+              <Link className={`nav-link active ${styles.navItem}`} aria-current="page" to="/About_Us">
+                About Us
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Articles">Articles</Link>
+              <Link className={`nav-link ${styles.navItem}`} to="/Articles">Articles</Link>
             </li>
             <li className="nav-item">
               {/* <a className="nav-link" href="#">Directories</a> */}
-              <Link className="nav-link" to="/Directories" >Directories</Link>
+              <Link className={`nav-link ${styles.navItem}`} to="/Directories" >Directories</Link>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className={`nav-link dropdown-toggle ${styles.navItem}`}
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -72,10 +74,10 @@ const NavBar = () => {
                 Research
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Publications</a></li>
-                <li><a className="dropdown-item" href="#">Projects</a></li>
+                <li><a className={`dropdown-item ${styles.navItem}`} href="#">Publications</a></li>
+                <li><a className={`dropdown-item ${styles.navItem}`} href="#">Projects</a></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Other</a></li>
+                <li><a className={`dropdown-item ${styles.navItem}`} href="#">Other</a></li>
               </ul>
             </li>
             <li className="nav-item">

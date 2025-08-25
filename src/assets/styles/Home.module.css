@@ -1,0 +1,290 @@
+.mainContainer {
+  background-image: url('/images/Image2.jpg');
+  background-size: cover;
+}
+
+/*Style for introduction block*/
+
+.IntroHome {
+  /* Use a subtle, complementary background color.
+     We'll make it a bit more opaque for better contrast. */
+  background-color: rgba(110, 167, 114, 0.7);
+  
+  /* Add padding to create space inside the section, 
+     making it less cramped. */
+  padding: 8px 5px;
+  
+  /* Center the content horizontally. */
+  text-align: center;
+}
+
+.IntroHeader {
+  /* Use a more professional color that contrasts well
+     with the background. A dark gray or black is often a good choice.
+     Consider using a color palette generator for more options. */
+  color: #333 !important;
+  
+  /* Add some margin to separate it from the paragraph below. */
+  margin-bottom: 10px;
+}
+
+.IntroPar {
+  /* Keep the text black, but adjust the font size for readability. */
+  color: #000;
+  font-size: 1.1rem; /* Use 'rem' for better scaling */
+  
+  /* Add margin to separate it from the link. */
+  margin-bottom: 20px;
+}
+
+.IntroInfo {
+  /* This element is the container for your link. */
+  
+  /* Choose a more harmonious background color.
+     A deep blue or a dark green could work well. */
+  background-color: #4a6c66; /* Example: A dark, muted green */
+  
+  /* The width and height are good, but let's make it a bit more responsive. */
+  width: 220px;
+  height: 50px;
+  
+  /* Center the button horizontally on the page. 
+     'margin: 0 auto;' is a common and effective technique for this. */
+  margin: 0 auto 20px;
+  
+  /* Add a subtle shadow for a "pop-out" effect. */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Rounded corners make it look softer. */
+  border-radius: 10px;
+  
+  /* Align the text inside the button. */
+  text-align: center;
+  
+  /* Use flexbox to center the link's text vertically inside the button. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the link itself to look like a button */
+.IntroInfo a {
+  /* Remove the default link underline. */
+  text-decoration: none;
+  
+  /* Set a contrasting color for the link text. */
+  color: white;
+  
+  /* Make the text a bit bolder for better visibility. */
+  font-weight: bold;
+}
+
+/*Style for focus ares block*/
+
+.KeyAreas {
+  /* Add some top and bottom padding to create space from other sections. */
+  padding: 20px 10px;
+  
+  /* Set a neutral background color to make it stand out. */
+  background-color: #f9f9f9e9;
+  
+  /* Center the heading. */
+  text-align: center;
+}
+
+.KeyAreas h2 {
+  /* Style the main heading for emphasis. */
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* We'll use Flexbox to create a responsive, two-column layout. */
+.KeyAreas div[class^="Key"] {
+  /* Use Flexbox for each item to align content vertically. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* Add padding and a subtle border to make each card look contained. */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Add some space between the cards. */
+  margin-bottom: 20px;
+}
+
+/* Style the icons (if they are SVGs or font icons). */
+.KeyAreas div[class^="Key"] > * {
+  margin-bottom: 15px; /* Add space below the icon, heading, and paragraph. */
+}
+
+/* Style the headings inside each card. */
+.KeyAreas h3 {
+  color: #4a6c66; /* Use a color that complements your intro section. */
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Style the paragraph text. */
+.KeyAreas p {
+  color: #666;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Use a media query to create a grid layout on larger screens. */
+@media (min-width: 768px) {
+  .KeyAreas {
+    /* Use CSS Grid for the layout on larger screens. */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns. */
+    grid-gap: 30px; /* Space between grid items. */
+    
+    /* Remove the default margin on the key areas since the grid handles spacing. */
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+  }
+
+  .KeyAreas h2 {
+    /* Make the heading span both columns. */
+    grid-column: 1 / -1;
+  }
+}
+
+/* Style for introductory video*/
+
+.IntroVideo {
+  /* Add padding to the top and bottom to create space. */
+  padding: 50px 20px;
+  
+  /* Center the content horizontally. */
+  text-align: center;
+  
+  /* Use a background color to separate it from other sections. */
+  background-color: #eef3f7db; /* A light, calming blue-gray */
+}
+
+.IntroVideo p {
+  /* Style the text above the video. */
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px; /* Add space between the text and the video. */
+  font-weight: bold;
+}
+
+.video {
+  /* Set a max-width to prevent the video from getting too large on big screens. */
+  max-width: 800px;
+  
+  /* Make the video fluid and responsive to the parent container. */
+  width: 100%;
+  
+  /* Maintain the correct aspect ratio (16:9 for most YouTube videos). */
+  aspect-ratio: 16 / 9;
+  
+  /* Add a subtle shadow to make the video frame stand out. */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Add a small border-radius for a softer look. */
+  border-radius: 10px;
+  
+  /* Make sure the border is gone. */
+  border: none;
+}
+
+/* Style for a comment block*/
+.Comments {
+  /* Add padding to the top and bottom to create space from other sections. */
+  padding: 50px 20px;
+
+  /* Use a subtle background color to make the section stand out. */
+  background-color: #f7f9fbe5; /* A very light gray-blue */
+
+  /* Center the content. */
+  text-align: center;
+}
+
+.Comments h6 {
+  /* Style the heading to be friendly and clear. */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.form_Comments {
+  /* Center the form and limit its width on larger screens for better readability. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* This makes it the same maximum width as your video */
+  margin: 0 auto;
+}
+
+.CommentArea {
+  /* Set a responsive width and add padding inside the textarea. */
+  width: 100%;
+  padding: 15px;
+
+  /* Style the border and rounded corners. */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  /* Adjust font size and line height for readability. */
+  font-size: 1rem;
+  line-height: 1.5;
+
+  /* Smooth transition for hover/focus effects. */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.CommentArea:focus {
+  /* Add a highlight effect on focus to show it's active. */
+  border-color: #4a6c66; /* Use a complementary color */
+  outline: none; /* Remove the default browser outline */
+}
+
+.btnComment {
+  /* Style the submit button to be clear and clickable. */
+  margin-top: 20px;
+  padding: 12px 25px;
+  
+  /* Use the brand's primary color for the button. */
+  background-color: #4a6c66;
+  color: #fff;
+
+  /* Remove default border and add a border-radius. */
+  border: none;
+  border-radius: 8px;
+
+  /* Make the button look interactive. */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+
+  /* Add a smooth transition for the hover effect. */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btnComment:hover {
+  /* Darken the background color on hover. */
+  background-color: #3e5a52;
+  /* Add a subtle "push" effect. */
+  transform: translateY(-2px);
+}
+
+.submitFDB {
+  /* Style the feedback message after submission. */
+  margin-top: 20px;
+  font-style: italic;
+  color: #28a745; /* A green color for success messages */
+}
+
+.Icons {
+  width: 30px;
+  height: 30px;
+}
+
