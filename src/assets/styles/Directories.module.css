@@ -1,110 +1,126 @@
-.DirMainBlock {
-  font-family: Arial, sans-serif;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* ================================    Root Variables ================================ */ 
+:root {   
+  --card-background: rgba(255, 255, 255, 0.1);   
+  --card-border: rgba(255, 255, 255, 0.2);    
+  --text-primary: #f0f0f0b6;     /* Soft white for main text */   
+  --text-secondary: #efebebec;   /* Slightly dimmer white */   
+  --accent-color: #f3f0eb;     /* Accent from gradient */ 
+}   
 
-.DirHeader {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* Container for individual contributor cards */
-.DirMainBlock > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: #ada2a23e;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.DirMainBlock > div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Image styling */
-.DirPhoto {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover; /* one can use contain to show the full image */
-  border: 5px solid #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.DirMainBlock > div:hover .DirPhoto {
-  transform: scale(1.05);
-}
-
-/* Text content styling */
-.DirMainBlock > div > div:last-child {
-  margin-top: 20px;
-}
-
-.DirMainBlock h5 {
-  font-size: 1.5em;
-  color: #007bff;
-  margin: 10px 0 5px;
-  font-weight: 600;
-}
-
-.DirMainBlock h6 {
-  font-size: 1em;
-  color: #555;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.DirMainBlock p {
-  font-size: 0.9em;
-  color: #777;
-  line-height: 1.6;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-/* Responsive design for a two-column layout on larger screens */
-@media (min-width: 768px) {
-  .DirMainBlock {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
+/* ================================    Main Block Container ================================ */ 
+.DirMainBlock {   
+  font-family: Arial, sans-serif;   
+  padding: 20px;   
+  /* max-width: 1200px;    */
+  margin: 0 auto;   
+  text-align: center;    
   
-  .DirHeader {
-    grid-column: 1 / -1; /* Make the header span all columns */
-  }
-
-  /* Adjust card layout for horizontal alignment */
-  .DirMainBlock > div {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-  }
-
-  .DirMainBlock > div > div:first-child {
-    margin-right: 20px;
-  }
+  /* Background styling */   
+  /* background-color: #3a5a75; */
+  background-image:linear-gradient(rgba(249, 250, 251, 0.4), rgba(148, 173, 98, 0.4)), url('/images/WImage1.png');   
+  /* background-image: radial-gradient(circle, #efba6bd1, #e7e2db, #2a3035);    */
+  min-height: 70vh;    
   
-  .DirMainBlock > div > div:last-child {
-    margin-top: 0;
-  }
-}
+  /* Default text color */   
+  color: var(--text-primary); 
+}   
 
-/* Optional: Additional styling for a more cohesive look */
-body {
-  background-color: #7aa0b93b;
+/* ================================    Header ================================ */ 
+.DirHeader {   
+  font-size: 2.5em;   
+  font-weight: 700;   
+  letter-spacing: 1px;   
+  margin-bottom: 20px; /* Reduced from 5px to 20px for better spacing */
+  color: #f1eeee; 
+}   
+
+/* ================================    Contributor Card ================================ */ 
+.DirMainBlock > div {   
+  background-color: var(--card-background);   
+  border: 1px solid var(--card-border);   
+  border-radius: 15px;   
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);    
+  backdrop-filter: blur(12px);   
+  -webkit-backdrop-filter: blur(12px);    
+  
+  display: flex;   
+  flex-direction: column;   
+  align-items: center;    
+  
+  padding: 10px;   
+  margin-bottom: 10px; /* Reduced from auto to 10px */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}  
+
+.DirMainBlock > div:hover {   
+  transform: translateY(-10px);   
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+}   
+
+/* ================================    Contributor Photo ================================ */ 
+.DirPhoto {   
+  width: 200px;   
+  height: 200px;   
+  border-radius: 50%;   
+  object-fit: cover;  /* Use "contain" if you want full image visibility */      
+  border: 5px solid #fff;   
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);    
+  transition: transform 0.3s ease-in-out; 
+}  
+
+.DirMainBlock > div:hover .DirPhoto {   
+  transform: scale(1.05); 
+}   
+
+/* ================================    Text Content ================================ */ 
+.DirMainBlock > div > div:last-child {   
+  margin-top: 10px; 
+}  
+
+.DirMainBlock h5 {   
+  color: var(--accent-color); 
+  margin: 5px 0; /* Added to control spacing */
+}  
+
+.DirMainBlock h6, .DirMainBlock p {   
+  color: var(--text-secondary); 
+  margin: 5px 0; /* Added to control spacing */
+}   
+
+/* ================================    Responsive Layout (≥768px) ================================ */ 
+@media (min-width: 768px) {   
+  .DirMainBlock {     
+    display: grid;     
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */     
+    grid-template-rows: auto auto; /* Control row heights */
+    gap: 15px; /* Space between cards */
+    justify-items: center; /* center cards horizontally */     
+    align-items: start;    /* align them consistently at top */
+    align-content: start;  /* Pack grid content to the top */
+    padding: 20px; /* Consistent padding */
+  }    
+  
+  .DirHeader {     
+    grid-column: 1 / -1;  /* make header span across both columns */     
+    color: #fff;          
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; /* Reduced spacing after header */
+  }    
+  
+  .DirMainBlock > div {     
+    flex-direction: row;     
+    align-items: center;     
+    text-align: left;     
+    width: 100%;          /* ensures cards align properly */     
+    max-width: 500px;     /* prevent them from stretching too wide */
+    margin-bottom: 0;     /* Remove bottom margin in grid layout */
+  }    
+  
+  .DirMainBlock > div > div:first-child {     
+    margin-right: 10px;   
+  }    
+  
+  .DirMainBlock > div > div:last-child {     
+    margin-top: 0;   
+  } 
 }

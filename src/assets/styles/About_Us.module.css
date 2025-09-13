@@ -23,64 +23,107 @@
   align-items: center;
   position: relative;
   min-height: 550px;
-  background-image: linear-gradient(rgba(249, 250, 251, 0.4), rgba(202, 209, 210, 0.4)),
-    url('/images/Image1.jpeg');
+  background-image: linear-gradient(rgba(249, 250, 251, 0.4), rgba(148, 173, 98, 0.4)), url('/images/WImage1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 5px;
 }
 
-/* --- Styles for the Circular Sections (Mission, Vision, etc.) --- */
+/* --- Styles for Default Sections (Mission, Vision, etc.) --- */
 .Mission,
 .Vision,
-.Slogan,
-.CoreValues,
 .OurServices {
-  width: 500px;
+  width: 800px;
   height: 500px;
   background-color: rgba(255, 255, 255, 0.497);
-  border-radius: 50%;
-
+  border-radius: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Add padding to prevent content from touching the edges */
-  padding: 20px; 
+  padding: 20px;
 }
 
-/* --- Styles for the Headings --- */
+/* --- CORE VALUES SECTION STYLES --- */
+.ValuesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.CoreValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 25px;
+  width: auto;
+  max-width: 100%;
+}
+
+.CVluesCard {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CVluesCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.CVluesCard h3 {
+  margin-bottom: 10px;
+  color: #211c1c;
+}
+
+/* --- Styles for Headings --- */
 .HMission,
 .HVision,
-.HSlogan,
-.HCoreValues,
 .HOurServices {
   color: rgb(72, 53, 53) !important;
+  margin-bottom: 2rem;
 }
 
-/* --- Styles for All Direct Children of the Circles --- */
+/* .HCoreValues {
+  color: rgb(10, 10, 10) !important;
+  margin-bottom: 30px;
+} */
+
+/* --- Styles for All Direct Children of Default Sections --- */
 .Mission > *,
 .Vision > *,
-.Slogan > *,
-.CoreValues > *,
 .OurServices > * {
   text-align: center;
-  /* Set max-width on the direct children to prevent overflow */
-  max-width: 90%; 
-  /* Also, break long words to prevent them from overflowing the circle */
-  word-wrap: break-word; 
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
-/* --- Styles for the paragraph --- */
+/* --- Styles for paragraphs --- */
 .Mission p,
 .Vision p,
-.Slogan p,
-.CoreValues p,
 .OurServices p {
   color: rgb(4, 0, 0);
   font-size: 18px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  text-align: justify;
+}
+
+.CoreValuesGrid p {
+  color: rgb(4, 0, 0);
+  font-size: 16px;
+  /* font-weight: bold; */
+  text-align: center;
 }
 
 /* --- Navigation Buttons --- */
@@ -91,18 +134,20 @@
   justify-content: space-between;
   padding: 0 20px;
   box-sizing: border-box;
-  /* Corrected vertical centering */
-  top: 100%;
+  top: 90%;
   transform: translateY(-50%);
 }
 
 .navigation button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
-  background-color: #90c7a5;
+  background-color: #606361;
   border: none;
-  border-radius: 50%;
+  border-radius: 20%;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 30px;
   transition: background-color 0.3s;
   color: white;
 }
@@ -110,4 +155,97 @@
 .navigation button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* --- Link to Services Page --- */
+.LinkToservice {
+  background-color: #4a6c66;
+  width: 220px;
+  height: 50px;
+  margin: 20px auto 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LinkToservice a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* --- OUR SERVICES SECTION STYLES --- */
+.servicesContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.servDivider {
+  height: 100px;
+  border-left: 2px solid #4a6c66;
+}
+
+.serviceCategory {
+  padding: 10px;
+}
+
+.servList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.servList li {
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* --- RESPONSIVE DESIGN (MEDIA QUERIES) --- */
+
+/* For Services Section */
+@media (max-width: 768px) {
+  .servicesContent {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .servDivider {
+    height: 2px;
+    width: 80%;
+    border-left: none;
+    background-color: #4a6c66;
+  }
+}
+
+/* For Core Values Grid (Tablets) */
+@media (max-width: 900px) {
+  .CoreValuesGrid {
+    grid-template-columns: repeat(2, auto);
+    padding: 20px;
+  }
+}
+
+/* For Core Values Grid (Mobile Phones) */
+@media (max-width: 600px) {
+  .CoreValuesGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .CVluesCard {
+    padding: 15px;
+  }
 }

@@ -59,6 +59,11 @@ const NavBar = () => {
             <li className="nav-item">
               <Link className={`nav-link ${styles.navItem}`} to="/Articles">Articles</Link>
             </li>
+
+            <li className="nav-item">
+              <Link className={`nav-link ${styles.navItem}`} to="/Services">Our services</Link>
+            </li>
+
             <li className="nav-item">
               {/* <a className="nav-link" href="#">Directories</a> */}
               <Link className={`nav-link ${styles.navItem}`} to="/Directories" >Directories</Link>
@@ -80,9 +85,9 @@ const NavBar = () => {
                 <li><a className={`dropdown-item ${styles.navItem}`} href="#">Other</a></li>
               </ul>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+            </li> */}
           </ul>
         </div>
 

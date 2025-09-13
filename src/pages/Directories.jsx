@@ -11,7 +11,7 @@ const contributors = [
     photo: '/images/Deo.png', // Place the image in your public/images folder
   },
   {
-    name: 'Gustave Munezero Bwirayesu',
+    name: 'Gustave Bwirayesu',
     role: 'Co-founder',
     bio: 'Very passionate about cutting-edge technologies',
     photo: '/images/Gustave.png',

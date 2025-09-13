@@ -1,0 +1,155 @@
+/* --- Main Container --- */
+.ServMainBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-image:linear-gradient(rgba(249, 250, 251, 0.4), rgba(148, 173, 98, 0.4)), url('/images/WImage1.png');
+  background-size: cover;
+  background-attachment: fixed; /* Optional: Creates a nice parallax effect */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---Generic Card Styling (DRY Principle) --- */
+.serviceCard {
+  background-color: rgb(255, 255, 255); /* Slightly transparent */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 5px solid #007bff; /* Default color */
+}
+
+/* --- Card Hover Effect --- */
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --Differentiated Accent Colors --- */
+/* We keep these specific classes just for color overrides */
+.ServAIBlock { border-top-color: #007bff; }
+.ServConsultBlock { border-top-color: #28a745; }
+.ServRDBlock { border-top-color: #ffc107; }
+.ServCBBlock { border-top-color: #dc3545; }
+.ServITBlock { border-top-color: #a17098; }
+.ServMarketBlock { border-top-color: #abb466;}
+
+/* --- Icon Styling --- */
+.Icons {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background-color: #e7f3ff;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff; /* Default color */
+}
+
+/* Match icon colors to the card's accent color */
+.ServAIBlock .Icons { color: #007bff; background-color: #e7f3ff; }
+.ServConsultBlock .Icons { color: #28a745; background-color: #dbecde; }
+.ServRDBlock .Icons { color: #ffc107; background-color: #fff8e1; }
+.ServCBBlock .Icons { color: #dc3545; background-color: #fbebee; }
+.ServITBlock .Icons { color: #a17098; background-color: #f3ebf1; }
+.ServMarketBlock .Icons { color: #abb466; background-color: #ebeddd; }
+
+/* --- Header Styling --- */
+.servHeader {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Simplified List Styling --- */
+/* Target generic ul and li inside any service card */
+.serviceCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.serviceCard li {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0.75rem 0.5rem 0.75rem 1.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.serviceCard li:last-child {
+  border-bottom: none;
+}
+
+/* Custom Bullet Points */
+.serviceCard li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: bold;
+}
+
+/* Match bullet color to the card's accent color */
+.ServAIBlock li::before { color: #007bff; }
+.ServConsultBlock li::before { color: #28a745; }
+.ServRDBlock li::before { color: #ffc107; }
+.ServCBBlock li::before { color: #dc3545; }
+.ServITBlock li::before { color: #a17098; }
+.ServMarketBlock li::before { color: #abb466; }
+
+/* "Read More" Functionality Styles --- */
+.serviceContent {
+  width: 100%; /* Ensure it takes full width */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.collapsed {
+  max-height: 110px; /* Adjust this value to show 2-3 lines */
+}
+
+.expanded {
+  max-height: 1000px; /* A large value to reveal all content */
+}
+
+.readMoreBtn {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .ServMainBlock {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+  .servHeader {
+    font-size: 1.3rem;
+  }
+}

@@ -5,6 +5,7 @@ import Footer from './components/ui/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Directories from './pages/Directories';
 import Home from './pages/Home';
+import Services from './pages/Services'
 import Articles from './pages/Articles';
 import ArticleDetail from './pages/ArticleDetail';
 import About_Us from './pages/About_Us';
@@ -23,6 +24,7 @@ const App = () => {
             {/* Add more routed pages here */}
             <Route path="/" element={< Home/>} />
             <Route path="/About_Us" element={<About_Us />} />
+            <Route path="/Services" element={<Services />} />
             <Route path="/Articles" element={<Articles />} />
             <Route path="/articles/:id" element={<ArticleDetail />} />
           </Routes>

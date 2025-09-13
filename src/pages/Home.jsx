@@ -37,36 +37,54 @@ const Home = () => {
     <div className={styles.mainContainer}>
 
       <section className={styles.IntroHome}>
-        <h2 className={styles.IntroHeader}>Access to wisdom is universal</h2>
-        <p className={styles.IntroPar}>Good solution: Creativity + Innovation + Quality drivers </p>
+        <h2 className={styles.IntroHeader}>Universal Solutions. Real Impact.</h2>
+        <p className={styles.IntroPar}>Creativity - Innovation - Quality drivers </p>
         <p className={styles.IntroInfo}><Link to="/About_Us">Discover more about us</Link></p>
       </section>
 
       <section className={styles.KeyAreas}>
         <h2>Focus Areas</h2>
-        <div className={styles.KeyImapct}>
-          <GiBulletImpacts className={styles.Icons} />
-          <h3>Research</h3>
-          <p>Discovering, discivering Discovering</p>
-        </div>
-
-        <div className={styles.KeyData}>
-          <GiArtificialIntelligence className={styles.Icons} />
-          <h3>Consultancy</h3>
-          <p>Discovering, discivering Discovering</p>
-        </div>
-
-        <div className={styles.KeyAI}>
-          <FaDatabase className={styles.Icons} />
-          <h3>AI and Data Innovations</h3>
-          <p>Discovering, discivering Discovering</p>
-        </div>
-
+        <Link to="/Services">
+          <div className={styles.KeyResearch}>
+            <GiBulletImpacts className={styles.Icons} />
+            <h3>Research</h3>
+            <p> Collaborative research focusing on contributing to society and business development by advancing 
+              state-of-the-art AI and technology solutions, as well as other impactful 
+              initiatives that improve lives.
+            </p>
+          </div>
+        </Link>
+        
+        <Link to="/Services">
+          <div className={styles.KeyData}>
+            <GiArtificialIntelligence className={styles.Icons} />
+            <h3>Consultancy</h3>
+            <p>Partnering on consulting initiatives covering AI, data science, electrical 
+              energy systems, and other innovative technology solutions.
+            </p>
+          </div>
+        </Link>
+        
+        <Link to="/Services">
+          <div className={styles.KeyAI}>
+            <FaDatabase className={styles.Icons} />
+            <h3>AI and Data Innovations</h3>
+            <p>Partnering with businesses to unlock the full potential of AI and data science,
+              driving smarter decisions, operational efficiency, and measurable growth.
+              </p>
+          </div>
+        </Link>
+        
+        <Link to="/Services">
         <div className={styles.keyTraining}>
-          <MdReduceCapacity className={styles.Icons} />
-          <h3>Building capacities</h3>
-          <p>Discovering, discivering Discovering</p>
-        </div>
+            <MdReduceCapacity className={styles.Icons} />
+            <h3>Building capacities</h3>
+            <p>Empowering individuals and organizations to strengthen their capabilities 
+              in diverse applications and services fostering measurable growth.
+            </p>
+          </div>
+        </Link>
+        
       </section>
 
       <section className={styles.IntroVideo}>     

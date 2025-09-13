@@ -1,0 +1,73 @@
+/* Main container for the articles page */
+.ArtMainBlock {
+    background-image: linear-gradient(rgba(249, 250, 251, 0.5), rgba(148, 173, 98, 0.5)), url('/images/WImage1.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    /* border-radius: 10px; */
+    min-height: 100vh;
+    margin-top: 1.4rem;
+}
+
+/* Styles for the main heading */
+.mainHeading {
+    color: #d3eaeb !important;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    /* font-weight: bold; */
+}
+
+/* The list (ul) is now a vertical flex column */
+.articleGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* This still works to create space between cards */
+    list-style: none;
+    padding: 0;
+    
+    /* Optional: This centers your list and prevents it from becoming too wide on large screens */
+    margin: 0 auto;
+    max-width: 800px; 
+}
+
+/* Each list item (li) is styled as a card */
+.articleCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* A subtle "pop" effect when you hover over a card */
+.articleCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the article title link */
+.articleLink {
+    text-decoration: none;
+}
+
+.articleTitle {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin: 0 0 0.75rem 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.articleLink:hover .articleTitle {
+    color: #5d9c59; 
+}
+
+/* Styling for the meta-information (author, date) */
+.articleMeta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0.25rem 0 0 0;
+}

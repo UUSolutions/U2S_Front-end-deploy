@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import styles from '../assets/styles/Articles.module.css';
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -12,22 +12,18 @@ const Articles = () => {
   }, []);
 
   return (
-    <div className="container mt-4">
-      <h2>Articles</h2>
-      <ul className="list-group">
+    <div className={`container-fluid ${styles.ArtMainBlock}`}>
+      <h2 className={styles.mainHeading}>Articles</h2>
+      {/* Changed class from list-group to our new grid style */}
+      <ul className={styles.articleGrid}>
         {articles.map(article => (
-          <li key={article.id} className="list-group-item">
-            {/* <Link to={`/articles/${article.id}`}>
-              <h5>{article.title}</h5>
-            </Link> */}
-
-            <a href={`/articles/${article.id}`} target="_blank" rel="noopener noreferrer">
-              <h5>{article.title}</h5>
-            </a> 
-            {/* This above helps in opening in a new tab  */}
-            <p><em>Author</em> : {article.author}</p>
-            {/* <p><em>Updated at</em> : {article.updated_at}</p> */}
-            <p><em>Updated at</em> : {new Date(article.updated_at).toLocaleString()}</p>
+          // The list item is now a "card"
+          <li key={article.id} className={styles.articleCard}>
+            <a href={`/articles/${article.id}`} target="_blank" rel="noopener noreferrer" className={styles.articleLink}>
+              <h5 className={styles.articleTitle}>{article.title}</h5>
+            </a>
+            <p className={styles.articleMeta}><strong>Author:</strong> {article.author}</p>
+            <p className={styles.articleMeta}><strong>Updated:</strong> {new Date(article.updated_at).toLocaleDateString()}</p>
           </li>
         ))}
       </ul>

@@ -1,5 +1,5 @@
 .mainContainer {
-  background-image: url('/images/Image2.jpg');
+  background-image:linear-gradient(rgba(249, 250, 251, 0.4), rgba(148, 173, 98, 0.4)), url('/images/WImage1.png');
   background-size: cover;
 }
 
@@ -86,7 +86,7 @@
   padding: 20px 10px;
   
   /* Set a neutral background color to make it stand out. */
-  background-color: #f9f9f9e9;
+  background-color: #f9f9f993;
   
   /* Center the heading. */
   text-align: center;
@@ -96,7 +96,7 @@
   /* Style the main heading for emphasis. */
   font-size: 2rem;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 
 /* We'll use Flexbox to create a responsive, two-column layout. */
@@ -131,8 +131,10 @@
 /* Style the paragraph text. */
 .KeyAreas p {
   color: #666;
-  text-align: center;
+  text-align: justify; /* Justify the text */
   font-size: 1rem;
+  margin-left: 20px; /* Adjust value as needed */
+  margin-right: 20px;/* Adjust value as needed */ 
 }
 
 /* Use a media query to create a grid layout on larger screens. */

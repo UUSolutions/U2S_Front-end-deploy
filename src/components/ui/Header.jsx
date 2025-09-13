@@ -14,7 +14,7 @@ const Header = () => {
         {/* Right: Subtitle / description */}
         <div className="d-flex align-items-center">
           <p className={styles.pr_home}>
-            <strong>We leverage cutting-edge technologies to drive societal impact!!!</strong>
+            <strong>Access to wisdom is universal</strong>
           </p>
         </div>
       </div>
