@@ -10,7 +10,7 @@ const Home = () => {
   const [status, setStatus] = useState(null);
 
   // Base URL from environment, fallback to localhost
-  const API_BASE = import.meta.env.REACT_APP_API_URL || "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -6,7 +6,7 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   // Base URL from env var, fallback to localhost in dev
-  const API_BASE = import.meta.env.REACT_APP_API_URL || "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
   useEffect(() => {
     axios
