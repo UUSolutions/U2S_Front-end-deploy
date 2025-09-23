@@ -6,9 +6,7 @@
 /*Style for introduction block*/
 
 .IntroHome {
-  /* Use a subtle, complementary background color.
-     We'll make it a bit more opaque for better contrast. */
-  background-color: rgba(110, 167, 114, 0.7);
+    background-color: rgba(110, 167, 114, 0.7);
   
   /* Add padding to create space inside the section, 
      making it less cramped. */
@@ -19,11 +17,7 @@
 }
 
 .IntroHeader {
-  /* Use a more professional color that contrasts well
-     with the background. A dark gray or black is often a good choice.
-     Consider using a color palette generator for more options. */
-  color: #333 !important;
-  
+   color: #333 !important;
   /* Add some margin to separate it from the paragraph below. */
   margin-bottom: 10px;
 }
@@ -32,19 +26,13 @@
   /* Keep the text black, but adjust the font size for readability. */
   color: #000;
   font-size: 1.1rem; /* Use 'rem' for better scaling */
-  
-  /* Add margin to separate it from the link. */
   margin-bottom: 20px;
 }
 
 .IntroInfo {
   /* This element is the container for your link. */
   
-  /* Choose a more harmonious background color.
-     A deep blue or a dark green could work well. */
   background-color: #4a6c66; /* Example: A dark, muted green */
-  
-  /* The width and height are good, but let's make it a bit more responsive. */
   width: 220px;
   height: 50px;
   
@@ -55,10 +43,8 @@
   /* Add a subtle shadow for a "pop-out" effect. */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
-  /* Rounded corners make it look softer. */
+  /* Rounded corners */
   border-radius: 10px;
-  
-  /* Align the text inside the button. */
   text-align: center;
   
   /* Use flexbox to center the link's text vertically inside the button. */
@@ -69,14 +55,9 @@
 
 /* Style the link itself to look like a button */
 .IntroInfo a {
-  /* Remove the default link underline. */
-  text-decoration: none;
-  
-  /* Set a contrasting color for the link text. */
+  text-decoration: none; /* Remove the default link underline. */
   color: white;
-  
-  /* Make the text a bit bolder for better visibility. */
-  font-weight: bold;
+  font-weight: bold;   /* Make the text a bit bolder for better visibility. */
 }
 
 /*Style for focus ares block*/
@@ -84,11 +65,7 @@
 .KeyAreas {
   /* Add some top and bottom padding to create space from other sections. */
   padding: 20px 10px;
-  
-  /* Set a neutral background color to make it stand out. */
   background-color: #f9f9f993;
-  
-  /* Center the heading. */
   text-align: center;
 }
 
@@ -99,7 +76,7 @@
   margin-bottom: 5px;
 }
 
-/* We'll use Flexbox to create a responsive, two-column layout. */
+/* Use Flexbox to create a responsive, two-column layout. */
 .KeyAreas div[class^="Key"] {
   /* Use Flexbox for each item to align content vertically. */
   display: flex;

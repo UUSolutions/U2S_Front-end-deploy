@@ -14,11 +14,7 @@
   /* max-width: 1200px;    */
   margin: 0 auto;   
   text-align: center;    
-  
-  /* Background styling */   
-  /* background-color: #3a5a75; */
   background-image:linear-gradient(rgba(249, 250, 251, 0.4), rgba(148, 173, 98, 0.4)), url('/images/WImage1.png');   
-  /* background-image: radial-gradient(circle, #efba6bd1, #e7e2db, #2a3035);    */
   min-height: 70vh;    
   
   /* Default text color */   

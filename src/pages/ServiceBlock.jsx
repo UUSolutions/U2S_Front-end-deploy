@@ -1,9 +1,9 @@
-// ServiceBlock.js
+
 import React, { useState } from 'react';
 import styles from '../assets/styles/Services.module.css'; // Make sure the path is correct
 
 const ServiceBlock = ({ className, icon, title, children }) => {
-  // 1. Add state to track if the content is collapsed
+  // 1. Adding state to track if the content is collapsed
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   // Helper function to toggle the state

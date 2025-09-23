@@ -1,6 +1,6 @@
-// src/components/ui/AboutHeader.jsx
 
-import React from 'react';
+
+// import React from 'react';
 import styles from '../../assets/styles/AboutHeader.module.css';
 
 // Accept the onLinkClick and currentIndex props
@@ -8,7 +8,7 @@ const AboutHeader = ({ onLinkClick, currentIndex }) => {
     return (
         <header className={styles.aboutHeading}>
             <nav>
-                {/* <h2>Who we are!!</h2> */}
+    
                 <ul className={styles.heading_lst}>
                     <li className={`${styles.h_list1} ${currentIndex === 0 ? styles.active : ''}`}>
                         <a onClick={() => onLinkClick(0)}><em>Mission</em></a>
@@ -16,13 +16,11 @@ const AboutHeader = ({ onLinkClick, currentIndex }) => {
                     <li className={`${styles.h_list2} ${currentIndex === 1 ? styles.active : ''}`}>
                         <a onClick={() => onLinkClick(1)}><em>Vision</em></a>
                     </li>
-                    {/* <li className={`${styles.h_list3} ${currentIndex === 2 ? styles.active : ''}`}>
-                        <a onClick={() => onLinkClick(2)}><em>Slogan</em></a>
-                    </li> */}
-                    <li className={`${styles.h_list4} ${currentIndex === 2 ? styles.active : ''}`}>
+                   
+                    <li className={`${styles.h_list3} ${currentIndex === 2 ? styles.active : ''}`}>
                         <a onClick={() => onLinkClick(2)}><em>Core values</em></a>
                     </li>
-                    <li className={`${styles.h_list5} ${currentIndex === 3 ? styles.active : ''}`}>
+                    <li className={`${styles.h_list4} ${currentIndex === 3 ? styles.active : ''}`}>
                         <a onClick={() => onLinkClick(3)}><em>Our services</em></a>
                     </li>
                 </ul>

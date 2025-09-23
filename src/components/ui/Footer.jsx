@@ -6,14 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-success text-light py-1 mt-auto">
       <div className="container text-center">
-        {/* <h5>Follow Us</h5> */}
+        
         <div className="d-flex justify-content-center gap-4 my-3">
-          {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-light">
-            <FaFacebookF size={24} />
-          </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-light">
-            <FaTwitter size={24} />
-          </a> */}
+         
           <a href="https://www.linkedin.com/company/universal-umbrella-solutions-ltd" target="_blank" rel="noopener noreferrer" className="text-light">
             <FaLinkedinIn size={24} />
           </a>

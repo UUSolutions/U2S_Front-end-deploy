@@ -26,7 +26,7 @@
     list-style: none;
     padding: 0;
     
-    /* Optional: This centers your list and prevents it from becoming too wide on large screens */
+    /* Optional: This centers a list and prevents it from becoming too wide on large screens */
     margin: 0 auto;
     max-width: 800px; 
 }

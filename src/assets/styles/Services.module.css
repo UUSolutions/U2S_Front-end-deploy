@@ -32,7 +32,7 @@
 }
 
 /* --Differentiated Accent Colors --- */
-/* We keep these specific classes just for color overrides */
+/* Keep these specific classes just for color overrides */
 .ServAIBlock { border-top-color: #007bff; }
 .ServConsultBlock { border-top-color: #28a745; }
 .ServRDBlock { border-top-color: #ffc107; }

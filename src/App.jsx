@@ -18,7 +18,7 @@ const App = () => {
         <NavBar />
         <Header />
         <main className="flex-grow-1">
-          {/* <div className="container mt-4"> */}
+          
           <Routes>
             <Route path="/Directories" element={< Directories />} />
             {/* Add more routed pages here */}
@@ -28,7 +28,6 @@ const App = () => {
             <Route path="/Articles" element={<Articles />} />
             <Route path="/articles/:id" element={<ArticleDetail />} />
           </Routes>
-          {/* </div> */}
         </main>
         <Footer />
       </div>

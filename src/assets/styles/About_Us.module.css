@@ -1,20 +1,4 @@
-/* src/assets/styles/About_Us.module.css */
 
-/* --- Button for "Read More" --- */
-.BtnMissionMore {
-  background: rgb(185, 209, 201);
-  color: rgb(123, 129, 187);
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 5px 12px;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.BtnMissionMore:hover {
-  background: rgb(160, 190, 180);
-  color: darkred;
-}
 
 /* --- Main Container for the Sections (The Carousel) --- */
 .Us_section {
@@ -95,10 +79,7 @@
   margin-bottom: 2rem;
 }
 
-/* .HCoreValues {
-  color: rgb(10, 10, 10) !important;
-  margin-bottom: 30px;
-} */
+
 
 /* --- Styles for All Direct Children of Default Sections --- */
 .Mission > *,
@@ -134,7 +115,7 @@
   justify-content: space-between;
   padding: 0 20px;
   box-sizing: border-box;
-  top: 90%;
+  top: 83%;
   transform: translateY(-50%);
 }
 
