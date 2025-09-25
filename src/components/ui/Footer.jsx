@@ -15,9 +15,9 @@ const Footer = () => {
           {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-light">
             <FaInstagram size={24} />
           </a> */}
-          <a href="https://github.com/UUSolutions" target="_blank" rel="noopener noreferrer" className="text-light">
+          {/* <a href="https://github.com/UUSolutions" target="_blank" rel="noopener noreferrer" className="text-light">
             <FaGithub size={24} />
-          </a>
+          </a> */}
         </div>
         <p className="mb-0">&copy; {new Date().getFullYear()} Universal Umbrella Solutions (U2S). All rights reserved.</p>
       </div>
