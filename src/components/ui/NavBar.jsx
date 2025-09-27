@@ -1,8 +1,13 @@
 // import { FaUmbrella } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from '../../assets/styles/NavBar.module.css';
 
 const NavBar = () => {
+
+  // returns the appropriate class string for a nav link
+  const getNavLinkClass = (isActive) => {
+    return isActive ? `nav-link ${styles.NavActiveItem}` : `nav-link ${styles.navItem}`;           
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid d-flex align-items-center justify-content-between">
@@ -47,27 +52,58 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className={`nav-link active ${styles.navItem}`} aria-current="page" to="/">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => getNavLinkClass(isActive)
+                }
+                aria-current="page"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link active ${styles.navItem}`} aria-current="page" to="/About_Us">
+              <NavLink 
+                to="/About_Us"
+                className={({ isActive}) => getNavLinkClass(isActive)
+              }
+                aria-current="page"                 
+                >
                 About Us
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${styles.navItem}`} to="/Articles">Articles</Link>
+              <NavLink
+                to="/Articles"
+                className={({isActive}) => getNavLinkClass(isActive)
+                }
+                aria-current="page"  
+                >
+                Articles
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link className={`nav-link ${styles.navItem}`} to="/Services">Our services</Link>
+              <NavLink
+                to="/Services"
+                className={({isActive}) => getNavLinkClass(isActive)
+                }
+                aria-current="page"  
+                >
+                Our services
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              {/* <a className="nav-link" href="#">Directories</a> */}
-              <Link className={`nav-link ${styles.navItem}`} to="/Directories" >Directories</Link>
+              <NavLink
+                to="/Directories"
+                className={({isActive}) => getNavLinkClass(isActive)
+                }
+                aria-current="page"  
+                >
+                Directories
+              </NavLink>
             </li>
+
             <li className="nav-item dropdown">
               <a
                 className={`nav-link dropdown-toggle ${styles.navItem}`}
